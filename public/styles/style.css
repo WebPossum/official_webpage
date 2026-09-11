@@ -363,6 +363,7 @@ header nav.container {
   object-fit: cover;
 }
 
+.detail img,
 .carousel-inner > .carousel-item > img {
   max-height: 400px;
   width: auto;

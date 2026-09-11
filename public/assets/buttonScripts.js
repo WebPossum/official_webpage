@@ -1,9 +1,14 @@
 var currentIndex;
 var previousIndex;
-var tabSelector = ".tab";
-var swatchSelector = ".swatch";
-var activeTabClass = "active-tab";
-var activeSwatchClass = "active-swatch";
+const tabSelector = ".tab";
+const swatchSelector = ".swatch";
+const activeTabClass = "active-tab";
+const activeSwatchClass = "active-swatch";
+const hiddenClass = "hidden";
+const guitarImage = "#guitarImage";
+const gardeningCarousel = "#gardeningCarousel";
+const grillImage = "#grillImage";
+const drawingCarousel = "#drawingCarousel";
 
 function checkActive(selector) {
     return $(selector).hasClass(activeTabClass);
@@ -25,16 +30,28 @@ function showDetails(selector) {
 
     switch (selector) {
         case "guitar":
-            $("#drawingDetail").addClass("hidden");
+            $(guitarImage).removeClass(hiddenClass);
+            $(gardeningCarousel).addClass(hiddenClass);
+            $(grillImage).addClass(hiddenClass);
+            $(drawingCarousel).addClass(hiddenClass);
             break;
         case "gardening":
-            $("#drawingDetail").addClass("hidden");
+            $(guitarImage).addClass(hiddenClass);
+            $(gardeningCarousel).removeClass(hiddenClass);
+            $(grillImage).addClass(hiddenClass);
+            $(drawingCarousel).addClass(hiddenClass);
             break;
         case "grill":
-            $("#drawingDetail").addClass("hidden");
+            $(guitarImage).addClass(hiddenClass);
+            $(gardeningCarousel).addClass(hiddenClass);
+            $(grillImage).removeClass(hiddenClass);
+            $(drawingCarousel).addClass(hiddenClass);
             break;
         case "drawing":
-            $("#drawingDetail").removeClass("hidden");
+            $(guitarImage).addClass(hiddenClass);
+            $(gardeningCarousel).addClass(hiddenClass);
+            $(grillImage).addClass(hiddenClass);
+            $(drawingCarousel).removeClass(hiddenClass);
             break;
         default:
             break;
