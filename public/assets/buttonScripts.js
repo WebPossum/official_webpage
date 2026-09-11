@@ -10,7 +10,6 @@ function checkActive(selector) {
 }
 
 function addActive(selector) {
-    console.log(selector);
     $(selector).addClass(activeTabClass);
     $(selector.querySelector(swatchSelector)).addClass(activeSwatchClass);
 }
@@ -23,6 +22,23 @@ function removeActive(selector) {
 function showDetails(selector) {
     $(".detail h3").text(hobbyName[`${selector}`]);
     $(".detail p").text(hobbyText[`${selector}`]);
+
+    switch (selector) {
+        case "guitar":
+            $("#drawingDetail").addClass("hidden");
+            break;
+        case "gardening":
+            $("#drawingDetail").addClass("hidden");
+            break;
+        case "grill":
+            $("#drawingDetail").addClass("hidden");
+            break;
+        case "drawing":
+            $("#drawingDetail").removeClass("hidden");
+            break;
+        default:
+            break;
+    }
 }
 
 $(tabSelector).click(function () {
