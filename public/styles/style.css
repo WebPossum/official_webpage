@@ -404,6 +404,10 @@ header {
   background: var(--chalk);
 }
 
+.contact-section .container-fluid {
+  max-width: 1120px;
+}
+
 .contact-container {
   display: grid;
   grid-template-rows: 1fr;
@@ -496,6 +500,13 @@ footer {
   .hero-layout .tagline {
     color: white;
     mix-blend-mode: difference;
+  }
+}
+
+@media (max-width: 920px) {
+  .dossier {
+    grid-template-columns: 1fr;
+    min-width: 565px;
   }
 }
 
