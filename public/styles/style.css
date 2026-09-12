@@ -60,10 +60,7 @@ header {
   border-bottom: 3px solid var(--ball);
 }
 
-header nav.container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.navbar {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
