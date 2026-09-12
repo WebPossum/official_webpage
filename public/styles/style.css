@@ -13,6 +13,8 @@
     "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
   --radius: 3px;
+  --bs-carousel-indicator-active-bg: #666464;
+  --bs-carousel-control-icon-filter: invert(20%);
 }
 
 * {
