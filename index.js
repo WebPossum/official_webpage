@@ -11,8 +11,12 @@ app.get("/", (req, res) => {
     res.render("index.ejs");
 });
 
-app.get("/resume", (req, res) => {
-    res.render("resume.ejs");
+app.get("/resume_eng", (req, res) => {
+    res.render("resume_eng.ejs");
+});
+
+app.get("/resume_hun", (req, res) => {
+    res.render("resume_hun.ejs")
 });
 
 app.listen(port, () => {
